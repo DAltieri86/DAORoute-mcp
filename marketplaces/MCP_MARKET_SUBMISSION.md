@@ -37,6 +37,8 @@ API key required during controlled pilot
 Tools:
 
 ```text
+get_market_snapshot
+get_pool_evidence
 get_optimal_allocation
 get_protocol_security_status
 ```
@@ -88,4 +90,3 @@ scanner API key.
 
 Avoid promising APY, automated trading, or investment advice in marketplace
 copy.
-

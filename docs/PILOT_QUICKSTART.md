@@ -38,9 +38,50 @@ MCP _meta.api_key
 
 Prefer `x-api-key` unless your client has a better native convention.
 
-## 3. Start With Security Status
+## 3. Start With Market Coverage
 
-First call:
+Start by asking what DaoRoute currently sees:
+
+```json
+{
+  "tool": "get_market_snapshot",
+  "arguments": {
+    "asset": "USDC",
+    "chain": "auto",
+    "risk_profile": "conservative",
+    "min_pool_tvl_usd": 20000000,
+    "stablecoin_only": false,
+    "max_pools": 10
+  }
+}
+```
+
+This returns aggregate coverage, protocol and chain breakdowns, top candidate
+pools, data depth, and suggested next actions. It does not expose raw database
+dumps.
+
+## 4. Inspect A Pool
+
+Use `get_pool_evidence` when a candidate pool looks interesting:
+
+```json
+{
+  "tool": "get_pool_evidence",
+  "arguments": {
+    "protocol": "aave",
+    "chain": "ethereum",
+    "token_symbol": "USDC",
+    "history_days": 365
+  }
+}
+```
+
+This returns pool metadata, APR/APY/TVL history statistics, evidence grade, and
+follow-up actions.
+
+## 5. Check Security Status
+
+Before entering or increasing exposure, call:
 
 ```json
 {
@@ -67,7 +108,7 @@ Expected high-level fields:
 If `status` is `watch` or `compromised`, security takes precedence over yield
 or allocation signals.
 
-## 4. Request An Allocation Candidate
+## 6. Request An Allocation Candidate
 
 Example:
 
@@ -97,7 +138,7 @@ Important:
 - DaoRoute does not broadcast transactions.
 - The client must review and sign any downstream transaction.
 
-## 5. Interpret The Response
+## 7. Interpret The Response
 
 Focus on:
 
@@ -112,7 +153,7 @@ Focus on:
 Do not treat the response as a guarantee. Treat it as a structured decision
 packet for policy review, simulation, and user approval.
 
-## 6. Feedback To Send
+## 8. Feedback To Send
 
 Useful pilot feedback:
 
@@ -123,4 +164,3 @@ Useful pilot feedback:
 - whether the output was easy for an agent to act on;
 - whether you need additional risk fields;
 - whether the non-custodial execution metadata fits your workflow.
-

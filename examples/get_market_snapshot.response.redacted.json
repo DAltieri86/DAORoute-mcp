@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "request_id": "req_redacted_market",
+  "as_of": "2026-06-08T07:30:00Z",
+  "data_age_seconds": 0,
+  "asset": "USDC",
+  "risk_profile": "conservative",
+  "filters": {
+    "chain": "auto",
+    "min_pool_tvl_usd": 20000000,
+    "stablecoin_only": false,
+    "max_pools": 10
+  },
+  "market_summary": {
+    "headline": "82 candidate pools across 3 protocols and 10 chains matched the current filters.",
+    "candidate_pools": 82,
+    "candidate_protocols": 3,
+    "candidate_chains": 10,
+    "top_pool_count_returned": 10,
+    "baseline_apr": 5.0,
+    "risk_free_apr": 5.0
+  },
+  "protocol_breakdown": [
+    {
+      "protocol": "aave",
+      "pool_count": 41,
+      "tvl_usd": 12500000000,
+      "average_current_apr": 2.14,
+      "average_risk_score": 0.18
+    }
+  ],
+  "top_pools": [
+    {
+      "pool_id": 123,
+      "protocol": "aave",
+      "chain": "ethereum",
+      "pool_name": "Aave Ethereum USDC",
+      "token_symbols": "USDC",
+      "current_apr": 7.27,
+      "tvl_usd": 51000000,
+      "risk_score": 0.16,
+      "selection_signal": {
+        "suggested_next_action": "PROCEED",
+        "stablecoin_like": true,
+        "above_baseline_apr": true
+      }
+    }
+  ],
+  "data_product": {
+    "product_type": "market_intelligence_snapshot",
+    "raw_database_export_available": false,
+    "evidence_depth_score": 85.0,
+    "evidence_grade": "strong"
+  },
+  "recommended_use": [
+    "Pre-flight market scan before requesting a specific allocation.",
+    "Agent context window enrichment with current coverage and candidate pools.",
+    "Pilot due diligence without exposing private model or raw database assets."
+  ],
+  "attestation": {
+    "signed_by": "daoroute",
+    "algo": "ed25519",
+    "payload_hash": "sha256:redacted",
+    "signature": "0xredacted",
+    "valid_until": "2026-06-08T07:31:00Z"
+  }
+}
+

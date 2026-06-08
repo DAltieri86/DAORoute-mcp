@@ -30,12 +30,14 @@ DaoRoute packages decision evidence for agent workflows:
 - non-custodial execution metadata;
 - short-lived Ed25519 attestations.
 
-The server currently exposes two MCP tools:
+The server currently exposes four MCP tools:
 
 | Tool | Purpose |
 | --- | --- |
 | `get_optimal_allocation` | Returns an allocation decision with risk diagnostics, evidence, execution metadata, and optional attestation. |
 | `get_protocol_security_status` | Returns protocol security status, recommended action, active alerts, and safety override context. |
+| `get_market_snapshot` | Returns aggregate market coverage, candidate pool intelligence, protocol/chain breakdowns, and data-depth evidence. |
+| `get_pool_evidence` | Returns detailed read-only evidence for one pool lookup, including APR history stats, TVL context, risk fields, and follow-up actions. |
 
 ## What This Repository Is Not
 
@@ -64,8 +66,10 @@ without exposing the proprietary decision engine.
    - example requests;
    - response interpretation notes.
 3. Configure your MCP client with the endpoint and API key.
-4. Start with `get_protocol_security_status`.
-5. Then test `get_optimal_allocation` with a small simulated capital amount.
+4. Start with `get_market_snapshot` to inspect coverage and candidate pools.
+5. Use `get_pool_evidence` on shortlisted pools.
+6. Check `get_protocol_security_status` before considering exposure.
+7. Then test `get_optimal_allocation` with a small simulated capital amount.
 
 Generic remote MCP configuration:
 
@@ -88,6 +92,38 @@ metadata instead of `x-api-key`. DaoRoute supports all three forms during the
 pilot.
 
 ## Example Tool Call
+
+Market snapshot:
+
+```json
+{
+  "tool": "get_market_snapshot",
+  "arguments": {
+    "asset": "USDC",
+    "chain": "auto",
+    "risk_profile": "conservative",
+    "min_pool_tvl_usd": 20000000,
+    "stablecoin_only": false,
+    "max_pools": 10
+  }
+}
+```
+
+Pool evidence:
+
+```json
+{
+  "tool": "get_pool_evidence",
+  "arguments": {
+    "protocol": "aave",
+    "chain": "ethereum",
+    "token_symbol": "USDC",
+    "history_days": 365
+  }
+}
+```
+
+Allocation decision:
 
 ```json
 {
@@ -145,4 +181,3 @@ policy checks, user approval, signing, execution, monitoring, and legal review.
 
 This repository is public for review and pilot integration, but it is **not open
 source software**. See [`LICENSE.md`](LICENSE.md).
-

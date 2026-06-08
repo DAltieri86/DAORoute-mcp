@@ -1,0 +1,10 @@
+{
+  "tool": "get_pool_evidence",
+  "arguments": {
+    "protocol": "aave",
+    "chain": "ethereum",
+    "token_symbol": "USDC",
+    "history_days": 365
+  }
+}
+

@@ -9,6 +9,65 @@
   },
   "tools": [
     {
+      "name": "get_market_snapshot",
+      "description": "Return aggregate DaoRoute market coverage, candidate pool intelligence, protocol/chain breakdowns, data-depth evidence, and suggested follow-up actions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "asset": {
+            "type": "string",
+            "default": "USDC"
+          },
+          "chain": {
+            "type": "string",
+            "default": "auto"
+          },
+          "risk_profile": {
+            "type": "string",
+            "enum": ["conservative", "balanced", "moderate", "aggressive"],
+            "default": "conservative"
+          },
+          "min_pool_tvl_usd": {
+            "type": "number",
+            "default": 20000000
+          },
+          "stablecoin_only": {
+            "type": "boolean",
+            "default": false
+          },
+          "max_pools": {
+            "type": "integer",
+            "default": 10
+          }
+        }
+      }
+    },
+    {
+      "name": "get_pool_evidence",
+      "description": "Return detailed read-only evidence for a pool lookup, including metadata, APY history statistics, TVL context, risk fields, and recommended follow-up actions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "pool_id": {
+            "type": "integer"
+          },
+          "protocol": {
+            "type": "string"
+          },
+          "chain": {
+            "type": "string"
+          },
+          "token_symbol": {
+            "type": "string"
+          },
+          "history_days": {
+            "type": "integer",
+            "default": 365
+          }
+        }
+      }
+    },
+    {
       "name": "get_optimal_allocation",
       "description": "Return a non-custodial stablecoin allocation decision with risk diagnostics, evidence snapshot, execution metadata, and optional signed attestation.",
       "inputSchema": {
@@ -66,4 +125,3 @@
   "resources": [],
   "prompts": []
 }
-

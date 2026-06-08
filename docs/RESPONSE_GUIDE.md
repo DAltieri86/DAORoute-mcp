@@ -3,6 +3,17 @@
 DaoRoute responses are designed for agents first and humans second: explicit
 action, structured evidence, risk context, execution metadata, and attestation.
 
+## Tool Roles
+
+Use the tools in this order during pilot evaluation:
+
+1. `get_market_snapshot`: understand current market coverage, data depth, and
+   candidate pool universe.
+2. `get_pool_evidence`: inspect one candidate pool before asking for portfolio
+   sizing.
+3. `get_protocol_security_status`: check live security status before exposure.
+4. `get_optimal_allocation`: request the final portfolio-level decision packet.
+
 ## Recommended Action
 
 Allowed values:
@@ -55,4 +66,3 @@ Attestations are short-lived signatures over the response payload.
 
 Use them to verify what the engine returned at a specific timestamp. Do not use
 expired attestations for execution.
-

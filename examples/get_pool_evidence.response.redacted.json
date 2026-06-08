@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "request_id": "req_redacted_pool",
+  "as_of": "2026-06-08T07:30:00Z",
+  "data_age_seconds": 0,
+  "found": true,
+  "matches_count": 1,
+  "pool": {
+    "pool_id": 123,
+    "protocol": "aave",
+    "chain": "ethereum",
+    "pool_name": "Aave Ethereum USDC",
+    "token_symbols": "USDC",
+    "current_apr": 7.27,
+    "apy": 7.27,
+    "tvl_usd": 51000000,
+    "risk_score": 0.16
+  },
+  "history": {
+    "requested_days": 365,
+    "observations": 365,
+    "apr": {
+      "count": 365,
+      "average": 5.91,
+      "min": 2.11,
+      "max": 9.42,
+      "volatility": 1.08
+    },
+    "tvl_usd": {
+      "count": 365,
+      "average": 69000000,
+      "min": 44000000,
+      "max": 125000000,
+      "volatility": 12000000
+    }
+  },
+  "evidence_score": 90.0,
+  "evidence_grade": "strong",
+  "security_context": {
+    "protocol": "aave",
+    "security_status_source": "call get_protocol_security_status for live state",
+    "live_security_status_embedded": false,
+    "security_precedence": "Live security status overrides yield and evidence signals."
+  },
+  "decision_relevance": {
+    "raw_database_export_available": false,
+    "private_model_internals_exposed": false
+  },
+  "attestation": {
+    "signed_by": "daoroute",
+    "algo": "ed25519",
+    "payload_hash": "sha256:redacted",
+    "signature": "0xredacted",
+    "valid_until": "2026-06-08T07:31:00Z"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "request_id": "req_redacted_7f3a",
+  "as_of": "2026-06-06T14:33:10Z",
+  "data_age_seconds": 9,
+  "chain_scope": ["ethereum", "arbitrum", "base"],
+  "capital_usd": 100000,
+  "asset": "USDC",
+  "risk_profile": "conservative",
+  "recommended_action": "PROCEED",
+  "portfolio_risk_score": 0.18,
+  "portfolio_expected_apy": 0.0592,
+  "portfolio_expected_apy_net_of_fee": 0.0584,
+  "fee_bps": 8,
+  "diversification_score": 86.5,
+  "allocations": [
+    {
+      "pool_id": "aave-ethereum-usdc-redacted",
+      "protocol": "aave",
+      "chain": "ethereum",
+      "amount_pct": 0.15,
+      "amount_usd": 15000,
+      "apy_current": 0.061,
+      "risk_score": 0.16,
+      "risk_adjusted_score": 2.41,
+      "security_status": "clear",
+      "recommended_action": "PROCEED",
+      "forecast": {
+        "predicted_apr_7d": 0.06,
+        "predicted_apr_30d": 0.062,
+        "predicted_apr_90d": 0.058,
+        "confidence": 0.78,
+        "probability_above_baseline": 0.71,
+        "baseline_apr": 0.05,
+        "expected_impermanent_loss": 0,
+        "risk_level": "low"
+      },
+      "evidence": {
+        "tvl_usd": 51000000,
+        "apr_volatility_30d": 0.009,
+        "history_days_available": 365,
+        "why_selected": [
+          "passes protocol safety floor",
+          "security status is clear",
+          "forecast remains above baseline after transparent fee",
+          "fits diversification and max-allocation constraints"
+        ]
+      }
+    }
+  ],
+  "evidence_snapshot": {
+    "candidate_pools_screened": 82,
+    "apy_history_rows_indexed": 43817,
+    "governance_proposals_indexed": 1163,
+    "governance_votes_indexed": 3200000,
+    "raw_database_export_available": false,
+    "evidence_grade": "usable_for_controlled_pilots"
+  },
+  "execution": {
+    "non_custodial": true,
+    "broadcast": false,
+    "calldata_available": true,
+    "aggregator": "1inch",
+    "referrer_injected": true,
+    "max_slippage_bps": 100,
+    "client_must_review_and_sign": true
+  },
+  "attestation": {
+    "signed_by": "daoroute",
+    "algo": "ed25519",
+    "payload_hash": "sha256:redacted",
+    "signature": "0xredacted",
+    "valid_until": "2026-06-06T14:34:10Z"
+  },
+  "disclaimer": "Illustrative redacted sample. DaoRoute does not custody funds, guarantee returns, broadcast transactions, or provide investment advice."
+}
+

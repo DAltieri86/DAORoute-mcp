@@ -1,0 +1,19 @@
+{
+  "tool": "get_optimal_allocation",
+  "arguments": {
+    "capital_amount": "100000",
+    "asset": "USDC",
+    "chain": "auto",
+    "risk_profile": "conservative",
+    "signer_address": "0x1111111111111111111111111111111111111111",
+    "max_slippage_bps": 100,
+    "max_pools": 10,
+    "max_allocation_per_pool_bps": 2000,
+    "min_pools": 5,
+    "min_pool_tvl_usd": 20000000,
+    "excluded_protocols": [],
+    "time_horizon": "flexible",
+    "attestation_required": true
+  }
+}
+

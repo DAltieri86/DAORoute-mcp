@@ -1,0 +1,7 @@
+{
+  "tool": "get_protocol_security_status",
+  "arguments": {
+    "protocol": "aave"
+  }
+}
+

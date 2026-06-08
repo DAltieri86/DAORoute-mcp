@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-06-06T14:33:10Z",
+  "data_age_seconds": 2,
+  "protocol": "aave",
+  "status": "clear",
+  "recommended_action": "PROCEED",
+  "risk_score": 0.12,
+  "active_alerts": [],
+  "engine_action_taken": {
+    "auto_withdraw_triggered": false,
+    "positions_closed": false
+  },
+  "summary": "No active critical security alert for the protocol at the time of response.",
+  "attestation": {
+    "signed_by": "daoroute",
+    "algo": "ed25519",
+    "payload_hash": "sha256:redacted",
+    "signature": "0xredacted",
+    "valid_until": "2026-06-06T14:34:10Z"
+  }
+}
+

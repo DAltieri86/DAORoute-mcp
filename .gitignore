@@ -1,0 +1,23 @@
+.env
+.env.*
+!.env.example
+
+# Never publish private engine artifacts
+models/
+*.joblib
+*.pkl
+*.sqlite
+*.db
+*.parquet
+*.csv
+*.jsonl
+
+# Local/generated material
+logs/
+reports/private/
+tmp/
+.DS_Store
+node_modules/
+__pycache__/
+.pytest_cache/
+

@@ -157,7 +157,11 @@ Included:
 - [`marketplaces/SMITHERY.md`](marketplaces/SMITHERY.md) for Smithery listing;
 - [`marketplaces/MCP_MARKET_SUBMISSION.md`](marketplaces/MCP_MARKET_SUBMISSION.md)
   for directory submission copy;
+- [`docs/PILOT_ONBOARDING.md`](docs/PILOT_ONBOARDING.md) for approved-user
+  onboarding;
 - [`docs/PILOT_QUICKSTART.md`](docs/PILOT_QUICKSTART.md) for approved users;
+- [`docs/PILOT_FEEDBACK.md`](docs/PILOT_FEEDBACK.md) for structured pilot
+  feedback;
 - [`docs/API_KEY_POLICY.md`](docs/API_KEY_POLICY.md) for access control;
 - [`docs/SECURITY_AND_BOUNDARIES.md`](docs/SECURITY_AND_BOUNDARIES.md) for
   non-custodial limits.

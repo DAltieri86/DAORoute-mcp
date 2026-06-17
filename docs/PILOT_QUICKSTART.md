@@ -117,6 +117,10 @@ Expected high-level fields:
 ```json
 {
   "status": "clear",
+  "security_status_source": "defillama_hacks",
+  "security_cache_state": "fresh",
+  "last_checked_at": "ISO-8601 timestamp",
+  "data_age_seconds": 12,
   "recommended_action": "PROCEED",
   "active_alerts": [],
   "attestation": {
@@ -127,6 +131,10 @@ Expected high-level fields:
 
 If `status` is `watch` or `compromised`, security takes precedence over yield
 or allocation signals.
+
+Use `security_cache_state`, `security_status_source`, and `data_age_seconds` to
+distinguish a recently verified `clear` state from a missing or stale security
+cache.
 
 ## 6. Request An Allocation Candidate
 

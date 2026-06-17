@@ -149,6 +149,10 @@ Use this to inspect:
 If the result is `watch` or `compromised`, safety should override yield or
 allocation interest.
 
+Also inspect `security_cache_state`, `security_status_source`,
+`last_checked_at`, and `data_age_seconds`. A fresh `clear` status is stronger
+than a missing-cache `clear` status.
+
 ## 8. Fourth Tool Call: Allocation Candidate
 
 Start with simulated capital:
@@ -209,4 +213,3 @@ After your first test, please send:
 - whether API-key pricing, route fee, or both would fit your workflow.
 
 Use [`PILOT_FEEDBACK.md`](PILOT_FEEDBACK.md) if you want a structured template.
-

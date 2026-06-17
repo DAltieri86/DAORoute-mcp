@@ -90,6 +90,22 @@ record.
 
 This field exists to make the product more transparent, not to promise returns.
 
+## Security Freshness
+
+`get_protocol_security_status` can include:
+
+- `security_status_source`: the source that last wrote the status, such as
+  `defillama_hacks`;
+- `security_cache_state`: whether the response was backed by a fresh security
+  cache entry or by a missing cache;
+- `last_checked_at`: timestamp of the latest successful security check when
+  available;
+- `data_age_seconds`: age of that latest check.
+
+Agents should treat `watch` and `compromised` as safety overrides. A `clear`
+status with `security_cache_state="missing"` is weaker than a `clear` status
+with a recent `last_checked_at`.
+
 ## Execution Metadata
 
 Execution fields are non-custodial.

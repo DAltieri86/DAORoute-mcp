@@ -26,6 +26,7 @@ DaoRoute packages decision evidence for agent workflows:
 - risk-adjusted stablecoin allocation candidates;
 - live protocol security status;
 - multi-source data evidence snapshots;
+- validation evidence against naive baselines and pilot-readiness boundaries;
 - fee-aware expected APY fields;
 - non-custodial execution metadata;
 - short-lived Ed25519 attestations.
@@ -76,7 +77,9 @@ without exposing the proprietary decision engine.
 4. Start with `get_market_snapshot` to inspect coverage and candidate pools.
 5. Use `get_pool_evidence` on shortlisted pools.
 6. Check `get_protocol_security_status` before considering exposure.
-7. Then test `get_optimal_allocation` with a small simulated capital amount.
+7. Review `validation_evidence` to understand pilot readiness, baseline
+   comparisons, and public-claim boundaries.
+8. Then test `get_optimal_allocation` with a small simulated capital amount.
 
 Generic remote MCP configuration:
 
@@ -155,6 +158,23 @@ Allocation decision:
 ```
 
 See [`examples/`](examples/) for redacted request and response examples.
+
+## Validation Evidence
+
+DaoRoute responses can include a compact `validation_evidence` block. This is
+designed for pilot due diligence and agent policy checks.
+
+It may summarize:
+
+- whether public marketing claims are currently allowed;
+- whether controlled-pilot claims are allowed;
+- Genesis/publication blockers and warnings;
+- governance model validation versus a naive majority baseline;
+- yield backtest results versus naive APR persistence baselines;
+- candidate paper-validation status for shadow-mode research.
+
+This evidence is intentionally bounded: it helps a pilot user understand method,
+coverage, and maturity, but it is not a return guarantee or investment advice.
 
 ## Marketplace Readiness
 

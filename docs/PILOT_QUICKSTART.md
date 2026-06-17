@@ -75,8 +75,8 @@ Start by asking what DaoRoute currently sees:
 ```
 
 This returns aggregate coverage, protocol and chain breakdowns, top candidate
-pools, data depth, and suggested next actions. It does not expose raw database
-dumps.
+pools, data depth, validation status, and suggested next actions. It does not
+expose raw database dumps.
 
 ## 4. Inspect A Pool
 
@@ -169,6 +169,9 @@ Focus on:
 - `portfolio_expected_apy_net_of_fee`;
 - `evidence_summary` in compact mode, or `data_snapshot` / `data_product` in
   full mode;
+- `validation_evidence`, especially `controlled_pilot_claims_allowed`,
+  `public_marketing_claims_allowed`, blockers, warnings, and yield baseline
+  comparisons;
 - `execution.calldata_available`;
 - `attestation.valid_until`.
 

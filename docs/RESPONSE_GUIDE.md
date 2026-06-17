@@ -1,7 +1,8 @@
 # Response Guide
 
 DaoRoute responses are designed for agents first and humans second: explicit
-action, structured evidence, risk context, execution metadata, and attestation.
+action, structured evidence, validation context, risk context, execution
+metadata, and attestation.
 
 ## Verbosity
 
@@ -59,6 +60,33 @@ Typical fields:
 - whether raw database export is available.
 
 DaoRoute returns aggregate decision evidence, not raw database dumps.
+
+## Validation Evidence
+
+`validation_evidence` explains how mature the current evidence package is. It
+is deliberately separate from the allocation directive.
+
+Typical fields:
+
+- `status`: current publication/readiness status;
+- `public_marketing_claims_allowed`: whether the evidence is cleared for public
+  performance claims;
+- `controlled_pilot_claims_allowed`: whether it is suitable for controlled pilot
+  discussion;
+- `blockers` and `warnings`: why the product is still bounded, if applicable;
+- `yield_backtest`: out-of-sample yield validation against naive baselines;
+- `yield_candidate`: paper-validation status for research/shadow-mode models;
+- `forecast_experiment`: offline model comparison summary.
+
+Interpretation rule:
+
+```text
+If public_marketing_claims_allowed=false, use the output for pilot evaluation
+and internal policy checks only. Do not present it as a public performance track
+record.
+```
+
+This field exists to make the product more transparent, not to promise returns.
 
 ## Execution Metadata
 

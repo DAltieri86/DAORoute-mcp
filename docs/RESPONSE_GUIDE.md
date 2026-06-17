@@ -69,6 +69,8 @@ is deliberately separate from the allocation directive.
 Typical fields:
 
 - `status`: current publication/readiness status;
+- `evidence_pack`: aggregate evidence-pack status, including which validation
+  steps are present, insufficient, or failed;
 - `public_marketing_claims_allowed`: whether the evidence is cleared for public
   performance claims;
 - `controlled_pilot_claims_allowed`: whether it is suitable for controlled pilot

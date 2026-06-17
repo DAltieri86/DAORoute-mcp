@@ -166,6 +166,7 @@ designed for pilot due diligence and agent policy checks.
 
 It may summarize:
 
+- aggregate evidence-pack status and missing/failed validation steps;
 - whether public marketing claims are currently allowed;
 - whether controlled-pilot claims are allowed;
 - Genesis/publication blockers and warnings;

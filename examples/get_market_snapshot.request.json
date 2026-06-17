@@ -6,7 +6,7 @@
     "risk_profile": "conservative",
     "min_pool_tvl_usd": 20000000,
     "stablecoin_only": false,
-    "max_pools": 10
+    "max_pools": 10,
+    "verbosity": "compact"
   }
 }
-

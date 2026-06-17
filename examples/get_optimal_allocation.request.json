@@ -13,7 +13,7 @@
     "min_pool_tvl_usd": 20000000,
     "excluded_protocols": [],
     "time_horizon": "flexible",
-    "attestation_required": true
+    "attestation_required": true,
+    "verbosity": "compact"
   }
 }
-

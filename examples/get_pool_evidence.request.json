@@ -4,7 +4,7 @@
     "protocol": "aave",
     "chain": "ethereum",
     "token_symbol": "USDC",
-    "history_days": 365
+    "history_days": 365,
+    "verbosity": "compact"
   }
 }
-

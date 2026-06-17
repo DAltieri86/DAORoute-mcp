@@ -3,6 +3,22 @@
 DaoRoute responses are designed for agents first and humans second: explicit
 action, structured evidence, risk context, execution metadata, and attestation.
 
+## Verbosity
+
+All tools accept `verbosity`.
+
+```json
+{
+  "verbosity": "compact"
+}
+```
+
+Use `compact` for normal agent loops. It preserves the directive, key metrics,
+evidence summary, execution metadata, and signed attestation while removing long
+diagnostic sections.
+
+Use `full` for audit, troubleshooting, or pilot review. `full` is the default.
+
 ## Tool Roles
 
 Use the tools in this order during pilot evaluation:
@@ -29,7 +45,8 @@ Security overrides always take priority over yield or allocation signals.
 
 ## Evidence Snapshot
 
-`evidence_snapshot` summarizes the data coverage used to shape the response.
+`evidence_summary` in compact mode, or `data_snapshot` / `data_product` in full
+mode, summarizes the data coverage used to shape the response.
 
 Typical fields:
 

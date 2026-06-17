@@ -26,6 +26,23 @@ You do not receive:
 - private ingestion code;
 - custody, signing, or transaction broadcasting components.
 
+## 1.1 Response Verbosity
+
+Each tool supports:
+
+```json
+{
+  "verbosity": "compact"
+}
+```
+
+Use `compact` for normal agent workflows and marketplace testing. It keeps the
+directive, evidence summary, execution metadata, and attestation while omitting
+long diagnostic blocks.
+
+Use `full` when you want deeper audit context. `full` is the default if the
+field is omitted.
+
 ## 2. Authentication
 
 DaoRoute accepts the pilot API key through one of:
@@ -51,7 +68,8 @@ Start by asking what DaoRoute currently sees:
     "risk_profile": "conservative",
     "min_pool_tvl_usd": 20000000,
     "stablecoin_only": false,
-    "max_pools": 10
+    "max_pools": 10,
+    "verbosity": "compact"
   }
 }
 ```
@@ -71,7 +89,8 @@ Use `get_pool_evidence` when a candidate pool looks interesting:
     "protocol": "aave",
     "chain": "ethereum",
     "token_symbol": "USDC",
-    "history_days": 365
+    "history_days": 365,
+    "verbosity": "compact"
   }
 }
 ```
@@ -87,7 +106,8 @@ Before entering or increasing exposure, call:
 {
   "tool": "get_protocol_security_status",
   "arguments": {
-    "protocol": "aave"
+    "protocol": "aave",
+    "verbosity": "compact"
   }
 }
 ```
@@ -126,7 +146,8 @@ Example:
     "max_allocation_per_pool_bps": 2000,
     "min_pools": 5,
     "time_horizon": "flexible",
-    "attestation_required": true
+    "attestation_required": true,
+    "verbosity": "compact"
   }
 }
 ```
@@ -146,7 +167,8 @@ Focus on:
 - `security_status`;
 - `risk_adjusted_score`;
 - `portfolio_expected_apy_net_of_fee`;
-- `evidence_snapshot`;
+- `evidence_summary` in compact mode, or `data_snapshot` / `data_product` in
+  full mode;
 - `execution.calldata_available`;
 - `attestation.valid_until`.
 

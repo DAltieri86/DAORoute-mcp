@@ -39,6 +39,13 @@ The server currently exposes four MCP tools:
 | `get_market_snapshot` | Returns aggregate market coverage, candidate pool intelligence, protocol/chain breakdowns, and data-depth evidence. |
 | `get_pool_evidence` | Returns detailed read-only evidence for one pool lookup, including APR history stats, TVL context, risk fields, and follow-up actions. |
 
+All tools accept `verbosity: "full" | "compact"`.
+
+- Use `compact` for agent context windows, marketplace demos, and quick
+  integration tests.
+- Use `full` for audit, diagnostics, and deeper pilot review.
+- `full` remains the default.
+
 ## What This Repository Is Not
 
 This is not the DaoRoute engine source code.
@@ -104,7 +111,8 @@ Market snapshot:
     "risk_profile": "conservative",
     "min_pool_tvl_usd": 20000000,
     "stablecoin_only": false,
-    "max_pools": 10
+    "max_pools": 10,
+    "verbosity": "compact"
   }
 }
 ```
@@ -118,7 +126,8 @@ Pool evidence:
     "protocol": "aave",
     "chain": "ethereum",
     "token_symbol": "USDC",
-    "history_days": 365
+    "history_days": 365,
+    "verbosity": "compact"
   }
 }
 ```
@@ -139,7 +148,8 @@ Allocation decision:
     "max_allocation_per_pool_bps": 2000,
     "min_pools": 5,
     "time_horizon": "flexible",
-    "attestation_required": true
+    "attestation_required": true,
+    "verbosity": "compact"
   }
 }
 ```

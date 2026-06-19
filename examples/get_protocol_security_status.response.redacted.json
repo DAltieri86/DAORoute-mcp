@@ -1,5 +1,6 @@
 {
   "schema_version": "1.0",
+  "sample_notice": "Illustrative redacted sample - live values vary. Runtime protocol security status can differ from this example.",
   "as_of": "2026-06-06T14:33:10Z",
   "data_age_seconds": 2,
   "protocol": "aave",
@@ -20,4 +21,3 @@
     "valid_until": "2026-06-06T14:34:10Z"
   }
 }
-

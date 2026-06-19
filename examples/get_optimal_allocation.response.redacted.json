@@ -1,5 +1,6 @@
 {
   "schema_version": "1.0",
+  "sample_notice": "Illustrative redacted sample - live values vary. Runtime security status and recommended_action can differ from this example.",
   "request_id": "req_redacted_7f3a",
   "as_of": "2026-06-06T14:33:10Z",
   "data_age_seconds": 9,

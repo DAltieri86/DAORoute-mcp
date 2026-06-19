@@ -174,6 +174,9 @@ Allocation decision:
 ```
 
 See [`examples/`](examples/) for redacted request and response examples.
+All response examples are illustrative / redacted samples. Live values vary:
+security status, recommended actions, pool counts, evidence fields, and
+attestation timestamps can differ at runtime.
 
 ## Validation Evidence
 

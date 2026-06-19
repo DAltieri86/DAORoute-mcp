@@ -52,7 +52,7 @@ https://github.com/DAltieri86/DAORoute-mcp
 Landing:
 
 ```text
-https://daltieri86.github.io/DAORoute-landing/
+https://www.daoroute.com/
 ```
 
 Contact:

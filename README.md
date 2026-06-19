@@ -10,7 +10,7 @@ key policy. The private decision engine is not included.
 Landing page:
 
 ```text
-https://daltieri86.github.io/DAORoute-landing/
+https://www.daoroute.com/
 ```
 
 Pilot access:
@@ -100,6 +100,22 @@ Generic remote MCP configuration:
 Some clients use `Authorization: Bearer YOUR_PILOT_API_KEY` or MCP request
 metadata instead of `x-api-key`. DaoRoute supports all three forms during the
 pilot.
+
+## Integrations
+
+DaoRoute is intended to be integrable in minutes by approved pilot users.
+
+Framework-specific guides:
+
+- [Claude Desktop / Cursor](integrations/claude-desktop-cursor.md)
+- [LangChain / LangGraph](integrations/langchain-langgraph.md)
+- [OpenAI Agents SDK](integrations/openai-agents-sdk.md)
+- [ElizaOS](integrations/elizaos.md)
+- [Generic remote MCP](integrations/generic-remote-mcp.md)
+
+Each guide includes prerequisites, copy-paste configuration, a first
+`get_market_snapshot` call with `verbosity: "compact"`, response interpretation
+notes, and non-custodial boundaries.
 
 ## Example Tool Call
 
@@ -196,6 +212,8 @@ Included:
 - [`docs/API_KEY_POLICY.md`](docs/API_KEY_POLICY.md) for access control;
 - [`docs/SECURITY_AND_BOUNDARIES.md`](docs/SECURITY_AND_BOUNDARIES.md) for
   non-custodial limits.
+- [`integrations/`](integrations/) for copy-paste setup guides across common
+  agent frameworks.
 
 ## Safety And Legal Boundaries
 

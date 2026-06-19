@@ -4,7 +4,7 @@ This document summarizes what is ready to share with pilot users.
 
 ## Public Links
 
-- Landing page: `https://daltieri86.github.io/DAORoute-landing/`
+- Landing page: `https://www.daoroute.com/`
 - Public MCP pilot repository: this repository
 - Contact: `softwaretamrsv@gmail.com`
 
@@ -16,6 +16,7 @@ This document summarizes what is ready to share with pilot users.
 - sample requests;
 - redacted sample responses;
 - onboarding guide;
+- framework integration guides;
 - response field guide;
 - safety and non-custodial boundaries;
 - structured feedback template;
@@ -38,6 +39,7 @@ Send these after issuing a pilot key:
 - [`PILOT_ONBOARDING.md`](PILOT_ONBOARDING.md)
 - [`PILOT_QUICKSTART.md`](PILOT_QUICKSTART.md)
 - [`RESPONSE_GUIDE.md`](RESPONSE_GUIDE.md)
+- [`../integrations/`](../integrations/)
 - [`PILOT_FEEDBACK.md`](PILOT_FEEDBACK.md)
 - [`SECURITY_AND_BOUNDARIES.md`](SECURITY_AND_BOUNDARIES.md)
 

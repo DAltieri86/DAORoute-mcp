@@ -38,6 +38,12 @@
           "max_pools": {
             "type": "integer",
             "default": 10
+          },
+          "verbosity": {
+            "type": "string",
+            "enum": ["full", "compact"],
+            "default": "full",
+            "description": "Use compact for agent loops and marketplace demos; use full for pilot review."
           }
         }
       }
@@ -63,6 +69,12 @@
           "history_days": {
             "type": "integer",
             "default": 365
+          },
+          "verbosity": {
+            "type": "string",
+            "enum": ["full", "compact"],
+            "default": "full",
+            "description": "Use compact for agent loops and marketplace demos; use full for pilot review."
           }
         }
       }
@@ -96,6 +108,12 @@
           "attestation_required": {
             "type": "boolean",
             "default": true
+          },
+          "verbosity": {
+            "type": "string",
+            "enum": ["full", "compact"],
+            "default": "full",
+            "description": "Use compact for agent loops and marketplace demos; use full for pilot review."
           }
         },
         "required": [
@@ -116,6 +134,12 @@
           "protocol": {
             "type": "string",
             "description": "Protocol name, for example aave, compound, or curve."
+          },
+          "verbosity": {
+            "type": "string",
+            "enum": ["full", "compact"],
+            "default": "full",
+            "description": "Use compact for agent loops and marketplace demos; use full for pilot review."
           }
         },
         "required": ["protocol"]

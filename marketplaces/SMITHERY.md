@@ -2,6 +2,26 @@
 
 Smithery can publish hosted MCP servers by URL.
 
+## Listing Copy
+
+Name:
+
+```text
+DaoRoute
+```
+
+Short description:
+
+```text
+Non-custodial MCP decision layer for AI agents evaluating stablecoin allocation routes with risk scoring, security gates, evidence snapshots, execution metadata, and signed attestations.
+```
+
+Tags:
+
+```text
+mcp, defi, ai-agents, stablecoins, risk-scoring, security-gates, non-custodial, attestations, evidence
+```
+
 ## Publish URL
 
 Use the stable DaoRoute MCP endpoint:
@@ -49,3 +69,13 @@ If Smithery cannot scan because authentication is required:
 3. alternatively provide manual metadata using the server-card shape included
    in `.well-known/mcp/server-card.json`.
 
+## Boundaries
+
+Smithery copy must preserve the pilot framing:
+
+- free controlled pilot;
+- API key required;
+- non-custodial;
+- no guaranteed returns;
+- no investment advice;
+- no transaction signing or broadcasting by DaoRoute.

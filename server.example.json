@@ -4,6 +4,11 @@
   "title": "DaoRoute",
   "description": "Non-custodial MCP decision layer for AI agents evaluating stablecoin allocation routes with risk scoring, security gates, evidence snapshots, execution metadata, and signed attestations.",
   "version": "0.1.0",
+  "websiteUrl": "https://www.daoroute.com/",
+  "repository": {
+    "url": "https://github.com/DAltieri86/DAORoute-mcp",
+    "source": "github"
+  },
   "remotes": [
     {
       "type": "streamable-http",
@@ -26,4 +31,3 @@
     }
   ]
 }
-

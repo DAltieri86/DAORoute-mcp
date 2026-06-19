@@ -11,6 +11,11 @@
     {
       "name": "get_market_snapshot",
       "description": "Return aggregate DaoRoute market coverage, candidate pool intelligence, protocol/chain breakdowns, data-depth evidence, and suggested follow-up actions.",
+      "annotations": {
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "destructiveHint": false
+      },
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -51,6 +56,11 @@
     {
       "name": "get_pool_evidence",
       "description": "Return detailed read-only evidence for a pool lookup, including metadata, APY history statistics, TVL context, risk fields, and recommended follow-up actions.",
+      "annotations": {
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "destructiveHint": false
+      },
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -82,6 +92,11 @@
     {
       "name": "get_optimal_allocation",
       "description": "Return a non-custodial stablecoin allocation decision with risk diagnostics, evidence snapshot, execution metadata, and optional signed attestation.",
+      "annotations": {
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "destructiveHint": false
+      },
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -128,6 +143,11 @@
     {
       "name": "get_protocol_security_status",
       "description": "Return live protocol security status, recommended action, active alerts, and attestation metadata.",
+      "annotations": {
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "destructiveHint": false
+      },
       "inputSchema": {
         "type": "object",
         "properties": {

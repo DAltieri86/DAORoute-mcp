@@ -16,10 +16,30 @@ Short description:
 Non-custodial MCP decision layer for AI agents evaluating stablecoin allocation routes with risk scoring, security gates, evidence snapshots, execution metadata, and signed attestations.
 ```
 
+Long description:
+
+```text
+DaoRoute is a free controlled-pilot MCP server for AI agents and DeFi automation builders evaluating stablecoin allocation routes. It returns structured, non-custodial decision evidence: market snapshots, one-pool evidence, live protocol security status, allocation context, execution metadata, and optional short-lived Ed25519 attestations.
+
+DaoRoute is designed as a decision layer, not a wallet or trading bot. It does not custody funds, sign transactions, broadcast transactions, guarantee returns, provide investment advice, expose raw databases, or distribute private model internals.
+```
+
 Category:
 
 ```text
 DeFi / Finance / Data / Agent Tools
+```
+
+Tags:
+
+```text
+mcp, defi, ai-agents, stablecoins, risk-scoring, security-gates, non-custodial, attestations, evidence
+```
+
+Capabilities:
+
+```text
+Remote Streamable HTTP MCP server; API-key gated free controlled pilot; read-only tools; market coverage snapshots; pool evidence; protocol security status; stablecoin allocation decision packets; execution metadata; signed attestations.
 ```
 
 Transport:
@@ -74,11 +94,13 @@ softwaretamrsv@gmail.com
 
 ## Suggested Submission Order
 
-1. Smithery URL listing.
-2. MCP Find / MCP Directory style directories.
+1. Glama.
+2. PulseMCP.
 3. Official MCP Registry after endpoint and metadata are stable.
-4. GitHub topic discovery.
-5. Community posts after the listing URL is live.
+4. Smithery URL listing.
+5. awesome-mcp-servers PR.
+6. GitHub topic discovery.
+7. Community posts after the listing URL is live.
 
 ## Important Marketplace Notes
 

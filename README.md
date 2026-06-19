@@ -202,6 +202,12 @@ Included:
 
 - [`server.example.json`](server.example.json) for the official MCP Registry;
 - [`marketplaces/SMITHERY.md`](marketplaces/SMITHERY.md) for Smithery listing;
+- [`marketplaces/GLAMA.md`](marketplaces/GLAMA.md) for Glama listing;
+- [`marketplaces/PULSEMCP.md`](marketplaces/PULSEMCP.md) for PulseMCP listing;
+- [`marketplaces/AWESOME_MCP_SERVERS.md`](marketplaces/AWESOME_MCP_SERVERS.md)
+  for awesome-list PR copy;
+- [`marketplaces/SUBMIT.md`](marketplaces/SUBMIT.md) for the manual submission
+  playbook;
 - [`marketplaces/MCP_MARKET_SUBMISSION.md`](marketplaces/MCP_MARKET_SUBMISSION.md)
   for directory submission copy;
 - [`docs/PILOT_ONBOARDING.md`](docs/PILOT_ONBOARDING.md) for approved-user
@@ -214,6 +220,12 @@ Included:
   non-custodial limits.
 - [`integrations/`](integrations/) for copy-paste setup guides across common
   agent frameworks.
+
+Validate public assets before submission:
+
+```bash
+python3 scripts/validate_public_assets.py
+```
 
 ## Safety And Legal Boundaries
 

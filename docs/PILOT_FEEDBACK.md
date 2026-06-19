@@ -61,9 +61,8 @@ What format would be easier for your client?
 
 ```text
 Would you use DaoRoute before a real DeFi allocation review? yes/no/maybe
-Would API-key pricing fit your workflow? yes/no/maybe
-Would route/referrer fee pricing fit your workflow? yes/no/maybe
-What would need to change before you would pay?
+Would this fit your workflow if the pilot continues? yes/no/maybe
+What would need to change before you would rely on it more often?
 ```
 
 ## 7. Safety Boundaries
@@ -81,4 +80,3 @@ What should DaoRoute improve next?
 Would you be open to a follow-up call?
 Can we quote any part of your feedback publicly? yes/no
 ```
-

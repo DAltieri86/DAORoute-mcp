@@ -210,6 +210,6 @@ After your first test, please send:
 - whether the output was agent-actionable;
 - fields you expected but did not receive;
 - whether you would use DaoRoute before real allocation review;
-- whether API-key pricing, route fee, or both would fit your workflow.
+- what would make the pilot more useful in your workflow.
 
 Use [`PILOT_FEEDBACK.md`](PILOT_FEEDBACK.md) if you want a structured template.

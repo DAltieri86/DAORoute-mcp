@@ -52,7 +52,7 @@
     "yield_active_pools": 82,
     "apy_history_rows": 43817,
     "governance_proposals": 1163,
-    "governance_votes": 3200000,
+    "governance_votes": 3100000,
     "raw_database_export_available": false,
     "evidence_grade": "usable_for_controlled_pilots",
     "validation_status": "controlled_pilot_only"

@@ -209,8 +209,8 @@ Included:
 - [`marketplaces/PULSEMCP.md`](marketplaces/PULSEMCP.md) for PulseMCP listing;
 - [`marketplaces/AWESOME_MCP_SERVERS.md`](marketplaces/AWESOME_MCP_SERVERS.md)
   for awesome-list PR copy;
-- [`marketplaces/SUBMIT.md`](marketplaces/SUBMIT.md) for the manual submission
-  playbook;
+- [`marketplaces/README.md`](marketplaces/README.md) for the public listing
+  asset index;
 - [`marketplaces/MCP_MARKET_SUBMISSION.md`](marketplaces/MCP_MARKET_SUBMISSION.md)
   for directory submission copy;
 - [`docs/PILOT_ONBOARDING.md`](docs/PILOT_ONBOARDING.md) for approved-user

@@ -28,7 +28,7 @@ REQUIRED_MARKETPLACE_FILES = {
     "marketplaces/SMITHERY.md",
     "marketplaces/AWESOME_MCP_SERVERS.md",
     "marketplaces/MCP_MARKET_SUBMISSION.md",
-    "marketplaces/SUBMIT.md",
+    "marketplaces/README.md",
 }
 
 
@@ -117,10 +117,10 @@ def validate_marketplace_files() -> None:
     if missing:
         raise AssertionError(f"missing marketplace files: {missing}")
 
-    submit = (ROOT / "marketplaces/SUBMIT.md").read_text()
+    listing_index = (ROOT / "marketplaces/README.md").read_text()
     for directory in ("Glama", "PulseMCP", "Official MCP Registry", "Smithery"):
-        if directory not in submit:
-            raise AssertionError(f"SUBMIT.md missing {directory}")
+        if directory not in listing_index:
+            raise AssertionError(f"marketplaces/README.md missing {directory}")
 
 
 def validate_no_obvious_secrets() -> None:
